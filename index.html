@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Neural network demo</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="script/MLP.js"></script>
+    <script src="script/main.js"></script>
+   
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div style="float: left;">
+            <span>Your drawing (150 x 150):</span><br />
+            <canvas id="canvas" width="150" height="150"></canvas>
+        </div>
+        <div style="float: left; margin-left: 15px;">
+            <span>Outline grid (15x15):</span><br />
+            <canvas id="outlines" width="150" height="150"></canvas>
+        </div>
+        <div id="output">
+            <span>
+                Output:<br />
+            </span>
+            <span id="bestGuess">
+            </span>
+        </div>
+    </div>
+    <div style="clear:both;">
+        <button id="clear">Очистить</button>
+        <button id="read">Распознать</button>
+    </div>
+    <hr />
+    <div>
+        <input type="text" value="A" maxlength="1" id="txtCharacter" />
+        <button id="trainCharacter">Обучить</button>
+        <div id="outputValues"></div>
+    </div>
+</body>
+</html>
